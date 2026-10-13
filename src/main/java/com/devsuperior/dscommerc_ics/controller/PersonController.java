@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.devsuperior.dscommerc_ics.dto.PersonDTO;
 import com.devsuperior.dscommerc_ics.dto.PersonDepartmentDTO;
 import com.devsuperior.dscommerc_ics.service.PersonService;
 
@@ -32,6 +33,14 @@ private PersonService service;
 	}
 	
 	
+	@PostMapping(value = "/dto")
+	public ResponseEntity<PersonDTO> insert(@Valid  @RequestBody  PersonDTO dto) {
+		 dto =  service.insert(dto);
+		 
+         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+        		 .buildAndExpand(dto.getId()).toUri();
+         return ResponseEntity.created(uri).body(dto);
+	}
 	
 	
 	
