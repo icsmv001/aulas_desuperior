@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class PersonService {
 	
-
 	@Autowired
 	private PersonRepository repository;
 	

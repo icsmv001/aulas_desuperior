@@ -35,7 +35,21 @@ INSERT INTO tb_person (name, salary, department_id) VALUES ('Joao', 4000.0, 1);
 INSERT INTO tb_person (name, salary, department_id) VALUES ('Maria', 6000.0, 2);
 INSERT INTO tb_person (name, salary, department_id) VALUES ('Carlos', 3000.0, 2);
 
+INSERT INTO tb_category (name) VALUES ('Livros');
+INSERT INTO tb_category (name) VALUES ('Eletronicos');
+INSERT INTO tb_category (name) VALUES ('Computadores');
 
+INSERT INTO tb_product (name,price) VALUES ('The Lord of the Rings', 90.50);
+INSERT INTO tb_product (name,price) VALUES ('Smart TV', 2190.00);
+INSERT INTO tb_product (name,price) VALUES ('Macbook', 1258.8);
+INSERT INTO tb_product (name,price) VALUES ('PC Gamer', 1288.8);
+INSERT INTO tb_product (name,price) VALUES ('BICICLETA BIKE', 790.8);
+
+INSERT INTO tb_product_category (product_id, category_id) VALUES (1,2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (2,2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (2,3);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (3,3);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (4,3);
 
 
 
